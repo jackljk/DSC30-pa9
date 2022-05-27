@@ -19,8 +19,12 @@ public class Person {
     }
 
     public boolean addPhoneNumber(String pn) {
-        this.nelems++;
-        return this.tree.add(pn);
+        if (this.tree.add(pn)){
+            this.nelems++;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public ArrayList<String> getPhoneNumbers() {
@@ -35,8 +39,11 @@ public class Person {
     public boolean deletePhoneNumber(String pn) {
         if (this.nelems == 1){
             return false;
+        } else if (this.tree.remove(pn)){
+            this.nelems--;
+            return true;
+        } else {
+            return false;
         }
-        this.nelems--;
-        return this.tree.remove(pn);
     }
 }
