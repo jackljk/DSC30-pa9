@@ -55,7 +55,7 @@ public class ContactList {
     }
 
     public String[] fetchAllPhoneNumbers() {
-        ArrayList<String> pns = new ArrayList<>();
+        Set<String> pns = new HashSet<>();
         for (Person temp : this.contacts.values()) {
             pns.addAll(temp.getPhoneNumbers());
         }
