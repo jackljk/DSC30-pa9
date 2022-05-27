@@ -29,7 +29,7 @@ public class Person {
 
     public ArrayList<String> getPhoneNumbers() {
         ArrayList<String> out = new ArrayList<String>();
-        Iterator sortedTree = this.tree.iterator();
+        Iterator<String> sortedTree = this.tree.iterator();
         for (int i = 0;i<this.nelems;i++){
             out.add((String) sortedTree.next());
         }
@@ -38,7 +38,7 @@ public class Person {
 
     public boolean deletePhoneNumber(String pn) {
         if (this.nelems == 1){
-            return false;
+            throw new IllegalArgumentException();
         } else if (this.tree.remove(pn)){
             this.nelems--;
             return true;
