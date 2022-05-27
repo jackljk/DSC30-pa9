@@ -37,9 +37,10 @@ public class Person {
     }
 
     public boolean deletePhoneNumber(String pn) {
-        if (this.nelems == 1){
-            throw new IllegalArgumentException();
-        } else if (this.tree.remove(pn)){
+        if (this.tree.remove(pn)){
+            if (this.nelems == 1){
+                throw new IllegalArgumentException();
+            }
             this.nelems--;
             return true;
         } else {
