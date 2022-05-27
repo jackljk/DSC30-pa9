@@ -3,9 +3,13 @@ import java.util.*;
 public class ContactList {
 	
 	// Add instance variables here\
-    private final TreeMap<String, Person> contacts = new TreeMap<String, Person>();
-    private int noContacts = 0;
+    private TreeMap<String, Person> contacts;
+    private int noContacts;
 
+    public ContactList() {
+        this.contacts = new TreeMap<String, Person>();
+        this.noContacts = 0;
+    }
 
     public boolean createContact(Person person) {
         if (this.contacts.put(person.getName(), person) == null){
