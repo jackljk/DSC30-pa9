@@ -68,6 +68,5 @@ public class ContactListTest {
         System.out.println(Arrays.toString(CL.fetchAllNames()));
         System.out.println(Arrays.toString(CL.fetchAllPhoneNumbers()));
         CL.createContact(Matt);
-        System.out.println(Arrays.toString(CL.getContactByRange("Aaak", "Jack2")));
     }
 }
