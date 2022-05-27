@@ -29,10 +29,6 @@ public class ContactList {
     }
 
     public Person[] getContactByRange(String start, String end) {
-        if (start.compareTo(end) > 0 || this.contacts.lastEntry().getKey().compareTo(end) < 0 ||
-                this.contacts.firstEntry().getKey().compareTo(start) > 0){
-            throw new IllegalArgumentException();
-        }
         Collection<Person> values = this.contacts.subMap(start, end).values();
         return values.toArray(new Person[0]);
     }

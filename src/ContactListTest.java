@@ -69,4 +69,30 @@ public class ContactListTest {
         System.out.println(Arrays.toString(CL.fetchAllPhoneNumbers()));
         CL.createContact(Matt);
     }
+
+    @Test
+    public void rangefuncTest(){
+        Person p1 = new Person("Jack1", pns);
+        Person p2 = new Person("Jack2", pns);
+        Person p3 = new Person("Jack3", pns);
+        Person p4 = new Person("Jack4", pns);
+        Person p5 = new Person("Jack5", pns);
+        Person p6 = new Person("Jack6", pns);
+        Person p7 = new Person("Jack7", pns);
+        CL.createContact(p1);
+        CL.createContact(p2);
+        CL.createContact(p3);
+        CL.createContact(p4);
+        CL.createContact(p5);
+        CL.createContact(p6);
+        CL.createContact(p7);
+        System.out.println(Arrays.toString(CL.fetchAllNames()));
+        System.out.println(Arrays.toString(CL.fetchAllPhoneNumbers()));
+        ArrayList<Person> test = new ArrayList<>();
+        test.add(p2);
+        test.add(p3);
+        test.add(p4);
+        System.out.println(Arrays.toString(CL.getContactByRange("Jack5", "Jack2")));
+//        assertArrayEquals(test.toArray(), CL.getContactByRange("Jack2", "Jack8"));
+    }
 }
