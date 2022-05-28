@@ -28,12 +28,7 @@ public class Person {
     }
 
     public ArrayList<String> getPhoneNumbers() {
-        ArrayList<String> out = new ArrayList<String>();
-        Iterator<String> sortedTree = this.tree.iterator();
-        for (int i = 0;i<this.nelems;i++){
-            out.add((String) sortedTree.next());
-        }
-        return out;
+        return new ArrayList<>(this.tree);
     }
 
     public boolean deletePhoneNumber(String pn) {
