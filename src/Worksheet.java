@@ -55,15 +55,15 @@ public class Worksheet {
         nodeList.add(new HuffmanNode('p',  6, "01"));
         nodeList.add(new HuffmanNode('a', 6, "00"));
         nodeList.add(new HuffmanNode('0', 6, "111"));
-        nodeList.add(new HuffmanNode('1', 1, "10000"));
-        nodeList.add(new HuffmanNode('\n', 4, "110"));
-        nodeList.add(new HuffmanNode('2', 1, "10001"));
-        nodeList.add(new HuffmanNode('3', 1, "10010"));
-        nodeList.add(new HuffmanNode('4', 1, "10011"));
-        nodeList.add(new HuffmanNode('5', 1, "10100"));
-        nodeList.add(new HuffmanNode('o', 1, "10110"));
-        nodeList.add(new HuffmanNode('r', 1, "10111"));
-        nodeList.add(new HuffmanNode('6', 1, "10101"));
+        nodeList.add(new HuffmanNode('1', 1, "10100"));
+        nodeList.add(new HuffmanNode('\n', 4, "100"));
+        nodeList.add(new HuffmanNode('2', 1, "10101"));
+        nodeList.add(new HuffmanNode('3', 1, "10110"));
+        nodeList.add(new HuffmanNode('4', 1, "10111"));
+        nodeList.add(new HuffmanNode('5', 1, "11000"));
+        nodeList.add(new HuffmanNode('o', 1, "11010"));
+        nodeList.add(new HuffmanNode('r', 1, "11011"));
+        nodeList.add(new HuffmanNode('6', 1, "11001"));
         return nodeList;
     }
 
@@ -77,18 +77,18 @@ public class Worksheet {
         //Example code on adding nodes: nodeList.add(new HuffmanNode('p', 2, "0001"));
         nodeList.add(new HuffmanNode('T', 1, "01010"));
         nodeList.add(new HuffmanNode('h', 2, "1000"));
-        nodeList.add(new HuffmanNode('i', 3, "1101"));
+        nodeList.add(new HuffmanNode('i', 3, "1111"));
         nodeList.add(new HuffmanNode('s', 6, "00"));
-        nodeList.add(new HuffmanNode(' ', 4, "011"));
-        nodeList.add(new HuffmanNode('c', 2, "1010"));
+        nodeList.add(new HuffmanNode(' ', 4, "110"));
+        nodeList.add(new HuffmanNode('c', 2, "0110"));
         nodeList.add(new HuffmanNode('l', 2, "1001"));
-        nodeList.add(new HuffmanNode('a',  3, "1100"));
-        nodeList.add(new HuffmanNode('e', 2, "1011"));
-        nodeList.add(new HuffmanNode('r', 2, "1111"));
+        nodeList.add(new HuffmanNode('a',  3, "1110"));
+        nodeList.add(new HuffmanNode('e', 2, "0111"));
+        nodeList.add(new HuffmanNode('r', 2, "1011"));
         nodeList.add(new HuffmanNode('f', 1, "01011"));
         nodeList.add(new HuffmanNode('v', 1, "0100"));
-        nodeList.add(new HuffmanNode('o', 1, "11100"));
-        nodeList.add(new HuffmanNode('t', 1, "11101"));
+        nodeList.add(new HuffmanNode('o', 1, "10100"));
+        nodeList.add(new HuffmanNode('t', 1, "10101"));
         return nodeList;
     }
 
