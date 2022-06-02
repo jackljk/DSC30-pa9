@@ -3,12 +3,12 @@ import java.util.*;
 public class Person {
 	
     // Add instance variables here
-    TreeSet<String> tree;
+    HashSet<String> tree;
     int nelems;
     String name;
 	
 	public Person(String name, ArrayList<String> pnArray) {
-        this.tree = new TreeSet<String>();
+        this.tree = new HashSet<>();
         this.name = name;
         this.nelems = pnArray.size();
         this.tree.addAll(pnArray);

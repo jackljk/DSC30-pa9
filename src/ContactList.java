@@ -3,11 +3,11 @@ import java.util.*;
 public class ContactList {
 	
 	// Add instance variables here\
-    private TreeMap<String, Person> contacts;
+    private final TreeMap<String, Person> contacts;
     private int noContacts;
 
     public ContactList() {
-        this.contacts = new TreeMap<String, Person>();
+        this.contacts = new TreeMap<>();
         this.noContacts = 0;
     }
 
