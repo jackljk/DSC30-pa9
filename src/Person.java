@@ -28,7 +28,8 @@ public class Person {
     }
 
     public ArrayList<String> getPhoneNumbers() {
-        return new ArrayList<>(this.tree);
+        TreeSet<String> out = new TreeSet<>(this.tree);
+        return new ArrayList<>(out);
     }
 
     public boolean deletePhoneNumber(String pn) {
