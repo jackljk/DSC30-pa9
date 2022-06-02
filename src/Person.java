@@ -31,7 +31,7 @@ public class Person {
 
     public ArrayList<String> getPhoneNumbers() {
         ArrayList<String> out = new ArrayList<>(this.tree);
-        s.Modified_QuickSort(out, 0, this.nelems, 10);
+        s.Modified_QuickSort(out, 0, this.nelems - 1, 10);
         return out;
     }
 
