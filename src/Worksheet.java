@@ -60,10 +60,10 @@ public class Worksheet {
         nodeList.add(new HuffmanNode('2', 1, "10101"));
         nodeList.add(new HuffmanNode('3', 1, "10110"));
         nodeList.add(new HuffmanNode('4', 1, "10111"));
-        nodeList.add(new HuffmanNode('5', 1, "11000"));
-        nodeList.add(new HuffmanNode('o', 1, "11010"));
-        nodeList.add(new HuffmanNode('r', 1, "11011"));
-        nodeList.add(new HuffmanNode('6', 1, "11001"));
+        nodeList.add(new HuffmanNode('5', 1, "11010"));
+        nodeList.add(new HuffmanNode('o', 1, "11000"));
+        nodeList.add(new HuffmanNode('r', 1, "11001"));
+        nodeList.add(new HuffmanNode('6', 1, "11011"));
         return nodeList;
     }
 
@@ -104,23 +104,25 @@ public class Worksheet {
         nodeList.add(new BNode(Arrays.asList(16, 17, 24)));//0
         nodeList.add(new BNode(Arrays.asList(36)));//1
         nodeList.add(new BNode(Arrays.asList(43, 50)));//2
-        nodeList.add(new BNode(Arrays.asList(60, 67, 70)));//3
-        nodeList.add(new BNode(Arrays.asList(103)));//4
+        nodeList.add(new BNode(Arrays.asList(55, 60)));//3
+        nodeList.add(new BNode(Arrays.asList(70)));//4
+        nodeList.add(new BNode(Arrays.asList(103)));//5
         //Internals
-        nodeList.add(new BNode(Arrays.asList(32, 42)));//5
-        nodeList.add(new BNode(Arrays.asList(78)));//6
+        nodeList.add(new BNode(Arrays.asList(32, 42)));//6
+        nodeList.add(new BNode(Arrays.asList(67,78)));//7
         //root
-        nodeList.add(new BNode(Arrays.asList(55)));//7
+        nodeList.add(new BNode(Arrays.asList(53)));//8
         //Root to its children
-        nodeList.get(7).addChildren(nodeList.get(5));
-        nodeList.get(7).addChildren(nodeList.get(6));
-        //Internal node at index 5 to its children
-        nodeList.get(5).addChildren(nodeList.get(0));
-        nodeList.get(5).addChildren(nodeList.get(1));
-        nodeList.get(5).addChildren(nodeList.get(2));
+        nodeList.get(8).addChildren(nodeList.get(6));
+        nodeList.get(8).addChildren(nodeList.get(7));
         //Internal node at index 6 to its children
-        nodeList.get(6).addChildren(nodeList.get(3));
-        nodeList.get(6).addChildren(nodeList.get(4));
+        nodeList.get(6).addChildren(nodeList.get(0));
+        nodeList.get(6).addChildren(nodeList.get(1));
+        nodeList.get(6).addChildren(nodeList.get(2));
+        //Internal node at index 7 to its children
+        nodeList.get(7).addChildren(nodeList.get(3));
+        nodeList.get(7).addChildren(nodeList.get(4));
+        nodeList.get(7).addChildren(nodeList.get(5));
         return nodeList;
 
     }

@@ -3,11 +3,11 @@ import java.util.*;
 public class ContactList {
 	
 	// Add instance variables here\
-    private final TreeMap<String, Person> contacts;
+    private TreeMap<String, Person> contacts;
     private int noContacts;
 
     public ContactList() {
-        this.contacts = new TreeMap<>();
+        this.contacts = new TreeMap<String, Person>();
         this.noContacts = 0;
     }
 
@@ -55,7 +55,7 @@ public class ContactList {
     }
 
     public String[] fetchAllPhoneNumbers() {
-        Set<String> pns = new TreeSet<>();
+        Set<String> pns = new HashSet<>();
         for (Person temp : this.contacts.values()) {
             pns.addAll(temp.getPhoneNumbers());
         }

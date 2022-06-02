@@ -1,16 +1,14 @@
-import java.lang.reflect.Array;
 import java.util.*;   
 
 public class Person {
 	
     // Add instance variables here
-    Sorts<String> s;
-    HashSet<String> tree;
+    TreeSet<String> tree;
     int nelems;
     String name;
 	
 	public Person(String name, ArrayList<String> pnArray) {
-        this.tree = new HashSet<>();
+        this.tree = new TreeSet<String>();
         this.name = name;
         this.nelems = pnArray.size();
         this.tree.addAll(pnArray);
@@ -30,9 +28,7 @@ public class Person {
     }
 
     public ArrayList<String> getPhoneNumbers() {
-        ArrayList<String> out = new ArrayList<>(this.tree);
-        s.Modified_QuickSort(out, 0, this.nelems - 1, 10);
-        return out;
+        return new ArrayList<>(this.tree);
     }
 
     public boolean deletePhoneNumber(String pn) {
